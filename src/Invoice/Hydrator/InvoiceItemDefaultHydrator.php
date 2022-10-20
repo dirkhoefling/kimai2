@@ -113,6 +113,7 @@ class InvoiceItemDefaultHydrator implements InvoiceItemHydrator
             $values = array_merge($values, [
                 'entry.project' => $project->getName(),
                 'entry.project_id' => $project->getId(),
+                'entry.project_order_number' => $project->getOrderNumber(),
             ]);
 
             foreach ($project->getMetaFields() as $metaField) {
